@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import HomeStatCards from "../../components/ui/HomeStatCards";
 import HeroSection from "../../components/common/HeroSection";
+import HomeFriendCards from "../../components/ui/HomeFriendCards";
 
 const Home = () => {
     return (
@@ -20,8 +21,14 @@ const Home = () => {
                 <HomeStatCards/>
             </div>
            </section>
-           <section id="cards-section" className="pt-5">
-
+           <hr className="border-gray-200"/>
+           <section id="cards-section" className="py-5">
+                <div>
+                    <h4 className="text-center font-bold">Your Friends</h4>
+                </div>
+                <div>
+                    <HomeFriendCards/>
+                </div>
            </section>
         </div>
         </>

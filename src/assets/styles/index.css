@@ -7,6 +7,7 @@
     --color-footer-two: #346F5B;
     --color-body: #F8FAFC;
     --color-text-two: #64748B;
+    --color-tag-body: #CBFADB;
     --font-geist: "Geist", sans-serif;
 }
 
@@ -19,5 +20,8 @@
     }
     .footer-text-one {
         @apply text-[12px] text-text-two font-normal;
+    }
+    .tag-one {
+        @apply bg-tag-body text-footer py-1 px-5
     }
 }
