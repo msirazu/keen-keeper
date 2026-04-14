@@ -1,2 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --color-footer: #244D3F;
+    --color-footer-two: #346F5B;
+    --color-body: #F8FAFC;
+    --font-geist: "Geist", sans-serif;
+}
+
+@layer components {
+    .btn-main {
+        @apply bg-footer text-white cursor-pointer py-1 px-4 rounded-sm hover:bg-[#346F5B] transition duration-300;
+    }
+}
