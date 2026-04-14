@@ -8,6 +8,9 @@
     --color-body: #F8FAFC;
     --color-text-two: #64748B;
     --color-tag-body: #CBFADB;
+    --color-overdue: #EF4444;
+    --color-on-track: #244D3F;
+    --color-almost-due: #EFAD44;
     --font-geist: "Geist", sans-serif;
 }
 
@@ -22,6 +25,18 @@
         @apply text-[12px] text-text-two font-normal;
     }
     .tag-one {
-        @apply bg-tag-body text-footer py-1 px-5
+        @apply bg-tag-body text-footer py-1 px-3 rounded-full text-[10px]
+    }
+    .status-overdue {
+        @apply bg-overdue text-white py-1 px-3 rounded-full text-[10px]
+    }
+    .status-on-track {
+        @apply bg-on-track text-white py-1 px-3 rounded-full text-[10px]
+    }
+    .status-almost-due {
+        @apply bg-almost-due text-white py-1 px-3 rounded-full text-[10px]
+    }
+    .status-none {
+        @apply bg-gray-50 text-black py-1 px-3 rounded-full text-[10px]
     }
 }

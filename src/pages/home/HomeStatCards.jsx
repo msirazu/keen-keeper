@@ -1,12 +1,12 @@
-import HomeStatCard from "./HomeStatCard";
+import StatCard from "../../components/ui/StatCard";
 
 const HomeStatCards = () => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            <HomeStatCard num={10} text={'Total Friends'}/>
-            <HomeStatCard num={3} text={'On Track'}/>
-            <HomeStatCard num={6} text={'Need Attention'}/>
-            <HomeStatCard num={12} text={'Interactions This Month'}/>
+            <StatCard num={10} text={'Total Friends'}/>
+            <StatCard num={3} text={'On Track'}/>
+            <StatCard num={6} text={'Need Attention'}/>
+            <StatCard num={12} text={'Interactions This Month'}/>
         </div>
     );
 };
