@@ -11,6 +11,9 @@
 
 @layer components {
     .btn-main {
-        @apply bg-footer text-white cursor-pointer py-1 px-4 rounded-sm hover:bg-[#346F5B] transition duration-300;
+        @apply bg-footer text-white cursor-pointer py-1 px-4 rounded-sm hover:bg-footer-two transition duration-300;
+    }
+    .footer-text-two {
+        @apply text-[12px] text-white opacity-50 font-normal;
     }
 }
