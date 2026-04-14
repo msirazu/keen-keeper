@@ -1,8 +1,24 @@
+import { Helmet } from "react-helmet-async";
+
 const Home = () => {
     return (
+        <>
+        <Helmet>
+            <title>Homepage | Keen Keeper</title>
+            <meta name="description" content="keen keeper homepage"/>
+        </Helmet>
         <div>
-            this is home
+           <section>
+                this is homepage
+           </section>
+           <section>
+
+           </section>
+           <section>
+
+           </section>
         </div>
+        </>
     );
 };
 

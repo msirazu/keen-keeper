@@ -10,7 +10,7 @@ const Footer = () => {
             <section className='py-10 flex flex-col gap-5 justify-center items-center'>
                 <img src={footerLogo} alt="keen keeper logo" className='w-75'/>
                 <p className='footer-text-two text-center'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
-                <div className='space-y-2'>
+                <div className='space-y-2 flex flex-col justify-center items-center'>
                 <h5 className='text-white'>Social Links</h5>
                 <div className='flex gap-1'>
                     <img src={instagramIcon} alt="instagram icon" className='w-5 h-5'/>
