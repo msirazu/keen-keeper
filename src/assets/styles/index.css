@@ -6,6 +6,7 @@
     --color-footer: #244D3F;
     --color-footer-two: #346F5B;
     --color-body: #F8FAFC;
+    --color-text-two: #64748B;
     --font-geist: "Geist", sans-serif;
 }
 
@@ -15,5 +16,8 @@
     }
     .footer-text-two {
         @apply text-[12px] text-white opacity-50 font-normal;
+    }
+    .footer-text-one {
+        @apply text-[12px] text-text-two font-normal;
     }
 }

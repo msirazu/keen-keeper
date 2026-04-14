@@ -13,9 +13,9 @@ const Header = () => {
                     <img src={logoImg} alt="keen keeper logo" />
                 </div>
                 <div className='flex gap-2 md:gap-1'>
-                    <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : ''} flex items-center gap-1 btn`} to={'/'}><IoMdHome className='text-lg'/>Home</NavLink>
-                    <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : ''} flex items-center gap-1 btn`} to={'/timeline'}><RiTimeLine />Timeline</NavLink>
-                    <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : ''} flex items-center gap-1 btn`} to={'/stats'}><ImStatsDots />Stats</NavLink>
+                    <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : 'btn-ghost'} flex items-center gap-1 btn`} to={'/'}><IoMdHome className='text-lg'/>Home</NavLink>
+                    <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : 'btn-ghost'} flex items-center gap-1 btn`} to={'/timeline'}><RiTimeLine />Timeline</NavLink>
+                    <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : 'btn-ghost'} flex items-center gap-1 btn`} to={'/stats'}><ImStatsDots />Stats</NavLink>
                 </div>
             </section>
         </div>

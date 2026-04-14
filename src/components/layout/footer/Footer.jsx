@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div>
             <section className='py-10 flex flex-col gap-5 justify-center items-center'>
-                <img src={footerLogo} alt="keen keeper logo" className='w-75'/>
+                <img src={footerLogo} alt="keen keeper logo" className='w-50 md:w-75'/>
                 <p className='footer-text-two text-center'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <div className='space-y-2 flex flex-col justify-center items-center'>
                 <h5 className='text-white'>Social Links</h5>
