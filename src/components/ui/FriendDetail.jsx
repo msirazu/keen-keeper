@@ -46,7 +46,7 @@ const FriendDetail = ({ friend }) => {
             <div className="flex-1 flex flex-col gap-2">
                 <p className="flex items-center gap-1 bg-white px-5 py-2 rounded-lg justify-center text-sm h-full"><IoIosAlarm />Snooze 2 weeks</p>
                 <p className="flex items-center gap-1 bg-white px-5 py-2 rounded-lg justify-center text-sm h-full"><FaArchive />Archive</p>
-                <p className="flex items-center gap-1 bg-white px-5 py-2 rounded-lg justify-center text-sm h-full text-red-500"><MdDeleteOutline />Delete</p>
+                <p className="flex items-center gap-1 bg-white px-5 py-2 rounded-lg justify-center text-sm h-full text-red-500 cursor-pointer"><MdDeleteOutline />Delete</p>
             </div>
             <div className="flex-2 bg-white p-5 space-y-5">
                 <h4 className="font-bold">Quick Check-In</h4>

@@ -5,7 +5,7 @@ import DataContext from "../../features/context/DataContext";
 const HomeStatCards = () => {
     const { friends } = useContext(DataContext);
     const totalFriends = friends.length;
-    console.log(friends);
+
     const onTrack = friends.filter(f => f.status === 'on-track');
     const totalOnTrack = onTrack.length;
     const overdue = friends.filter(f => f.status === 'overdue');
