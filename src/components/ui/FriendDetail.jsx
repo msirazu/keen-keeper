@@ -2,9 +2,11 @@ import StatCard from "./StatCard";
 import { IoIosAlarm, IoIosCall } from "react-icons/io";
 import { MdDeleteOutline, MdMessage } from "react-icons/md";
 import { FaArchive, FaVideo } from "react-icons/fa";
+import { useContext } from "react";
+import DataContext from "../../features/context/DataContext";
 
 const FriendDetail = ({ friend }) => {
-
+    const { handleVideo, handleText, handleCall } = useContext(DataContext);
     const { name, tags, status, picture, bio, days_since_contact, goal, next_due_date } = friend;
 
     return (
@@ -49,9 +51,9 @@ const FriendDetail = ({ friend }) => {
             <div className="flex-2 bg-white p-5 space-y-5">
                 <h4 className="font-bold">Quick Check-In</h4>
                 <div className="grid grid-cols-3 gap-5">
-                    <button className="bg-gray-100 flex flex-col justify-center items-center py-2 rounded-sm cursor-pointer hover:bg-gray-200 gap-1"><IoIosCall className="text-xl"/>Call</button>
-                    <button className="bg-gray-100 flex flex-col justify-center items-center py-2 rounded-sm cursor-pointer hover:bg-gray-200 gap-1"><MdMessage className="text-xl"/>Text</button>
-                    <button className="bg-gray-100 flex flex-col justify-center items-center py-2 rounded-sm cursor-pointer hover:bg-gray-200 gap-1"><FaVideo className="text-xl"/>Video</button>
+                    <button onClick={() => handleCall(friend)} className="bg-gray-100 flex flex-col justify-center items-center py-2 rounded-sm cursor-pointer hover:bg-gray-200 gap-1"><IoIosCall className="text-xl"/>Call</button>
+                    <button onClick={() => handleText(friend)} className="bg-gray-100 flex flex-col justify-center items-center py-2 rounded-sm cursor-pointer hover:bg-gray-200 gap-1"><MdMessage className="text-xl"/>Text</button>
+                    <button onClick={() => handleVideo(friend)} className="bg-gray-100 flex flex-col justify-center items-center py-2 rounded-sm cursor-pointer hover:bg-gray-200 gap-1"><FaVideo className="text-xl"/>Video</button>
                 </div>
             </div>
             </section>
