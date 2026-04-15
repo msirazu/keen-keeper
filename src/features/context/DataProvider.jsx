@@ -49,8 +49,18 @@ const handleVideo = (data) => {
     logActivity(data, 'Video');
 }
 
+const handleFilter = (by) => {
+    if (by === 'type') {
+        const filtered = [...activities].sort((a, b) => a.type.localeCompare(b.type));
+        setActivities(filtered);
+    } else if (by === 'type2') {
+        const filtered = [...activities].sort((a, b) => b.type.localeCompare(a.type));
+        setActivities(filtered);
+    }
+}
+
     const dataInfo = {
-        friends, setFriends, loading, handleCall, handleText, handleVideo, activities
+        friends, setFriends, loading, handleCall, handleText, handleVideo, activities, handleFilter
     }
 
     return (

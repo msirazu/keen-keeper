@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import DataContext from "../../features/context/DataContext";
 import TimelineCard from "./TimelineCard";
+import TimelinFilter from "./TimelinFilter";
 
 const Timeline = () => {
     const { activities } = useContext(DataContext);
-    
+
     return (
         <>
         <Helmet>
@@ -13,12 +14,12 @@ const Timeline = () => {
             <meta name="description" content="keen keeper timeline page"/>
         </Helmet>
         <div className="py-5 space-y-5">
-            <section>
+            <section className="space-y-5">
                 <div>
                     <h1 className="font-bold text-2xl">Timeline</h1>
                 </div>
-                <div>
-
+                <div className="flex justify-center">
+                    <TimelinFilter/>
                 </div>
             </section>
             <section>
