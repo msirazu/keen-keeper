@@ -2,7 +2,7 @@ import { HashLoader } from 'react-spinners';
 
 const HashLoading = () => {
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center p-5'>
             <HashLoader />
         </div>
     );

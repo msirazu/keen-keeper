@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import DataContext from "../../features/context/DataContext";
 import FriendCard from '../../components/ui/FriendCard';
-import HashLoading from "../../components/common/HashLoader";
+import HashLoading from "../../components/common/HashLoading";
 
 const HomeFriendCards = () => {
     const { friends, loading } = useContext(DataContext);

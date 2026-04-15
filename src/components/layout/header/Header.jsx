@@ -10,7 +10,9 @@ const Header = () => {
         <div>
             <section className='flex flex-col md:flex-row justify-between items-center py-5 gap-5'>
                 <div>
+                    <Link to={'/'}>
                     <img src={logoImg} alt="keen keeper logo" />
+                    </Link>
                 </div>
                 <div className='flex gap-2 md:gap-1'>
                     <NavLink className={({isActive}) => `${isActive ? 'bg-footer text-white' : 'btn-ghost'} flex items-center gap-1 btn`} to={'/'}><IoMdHome className='text-lg'/>Home</NavLink>

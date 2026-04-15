@@ -2,6 +2,7 @@ import footerLogo from '../../../assets/icons/logo-xl.png';
 import facebookIcon from '../../../assets/icons/facebook.png';
 import instagramIcon from '../../../assets/icons/instagram.png';
 import twitterIcon from '../../../assets/icons/twitter.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const date = new Date();
@@ -19,9 +20,10 @@ const Footer = () => {
                 </div>
                 </div>
             </section>
+            
             <section className="footer-text-two flex justify-center py-5 border-t border-gray-500 flex-col items-center md:justify-between gap-2">
                 <div>
-                    <p className="">Copyright © {date.getFullYear()} - KeenKeeper. All rights reserved.</p>
+                    <p className="">Copyright © {date.getFullYear()} - <Link to={'/'}>KeenKeeper</Link>. All rights reserved.</p>
                 </div>
                 <div className="flex gap-5">
                     <p>Privacy Policy</p>
