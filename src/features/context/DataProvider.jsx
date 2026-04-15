@@ -34,23 +34,23 @@ const logActivity = (friend, type) => {
     }
 
     setActivities([newActivity, ...activities]);
-    toast.success(`${type} with ${friend.name} added`);
+    toast.success(`${type} with ${friend.name}`);
 }
 
 const handleCall = (data) => {
-    logActivity(data, 'call');
+    logActivity(data, 'Call');
 }
 
 const handleText = (data) => {
-    logActivity(data, 'text');
+    logActivity(data, 'Text');
 }
 
 const handleVideo = (data) => {
-    logActivity(data, 'video');
+    logActivity(data, 'Video');
 }
 
     const dataInfo = {
-        friends, setFriends, loading, handleCall, handleText, handleVideo
+        friends, setFriends, loading, handleCall, handleText, handleVideo, activities
     }
 
     return (

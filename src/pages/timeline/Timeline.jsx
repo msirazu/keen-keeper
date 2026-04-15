@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import DataContext from "../../features/context/DataContext";
+import TimelineCard from "./TimelineCard";
+
 const Timeline = () => {
     const { activities } = useContext(DataContext);
+    
     return (
         <>
         <Helmet>
@@ -20,7 +23,7 @@ const Timeline = () => {
             </section>
             <section>
                 <div className="flex flex-col gap-2">
-                
+                {activities.map(act => <TimelineCard act={act} key={act.id}/>)}
                 </div>
             </section>
         </div>
