@@ -1,12 +1,8 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import DataContext from "../../features/context/DataContext";
-import TimelineCallCard from "./TimelineCallCard";
-import TimelineTextCard from "./TimelineTextCard";
-import TimelineVideoCard from "./TimelineVideoCard";
-
 const Timeline = () => {
-    const { call, text, video } = useContext(DataContext);
+    const { activities } = useContext(DataContext);
     return (
         <>
         <Helmet>
@@ -24,9 +20,7 @@ const Timeline = () => {
             </section>
             <section>
                 <div className="flex flex-col gap-2">
-                {call.map(c => <TimelineCallCard key={c.id} c={c}/>)}
-                {text.map(t => <TimelineTextCard key={t.id} t={t}/>)}
-                {video.map(v => <TimelineVideoCard key={v.id} v={v}/>)}
+                
                 </div>
             </section>
         </div>

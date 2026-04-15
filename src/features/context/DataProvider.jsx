@@ -5,9 +5,7 @@ import { toast } from 'react-toastify';
 const DataProvider = ({ children }) => {
 const [friends, setFriends] = useState([]);
 const [loading, setLoading] = useState(true);
-const [call, setCall] = useState([]);
-const [text, setText] = useState([]);
-const [video, setVideo] = useState([]);
+const [activities, setActivities] = useState([]);
 
 useEffect(() => {
     const friendsPromise = async() => {
@@ -19,38 +17,40 @@ useEffect(() => {
     friendsPromise();
 }, []);
 
-const handleCall = (data) => {
-    const isExist = call.find(c => c.id === data.id);
+const logActivity = (friend, type) => {
+    const newActivity = {
+        id: crypto.randomUUID(),
+        friendId: friend.id,
+        name: friend.name,
+        date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric'}),
+        type: type
+    }
+
+    const isExist = activities.find(a => a.friendId === friend.id && a.type === type);
+
     if (isExist) {
-        toast.error(`Call with ${data.name} Exist`);
+        toast.error(`${type} with ${friend.name} Exist`);
         return;
     }
-    setCall([...call, data]);
-    toast.success(`Call with ${data.name}`);
+
+    setActivities([newActivity, ...activities]);
+    toast.success(`${type} with ${friend.name} added`);
+}
+
+const handleCall = (data) => {
+    logActivity(data, 'call');
 }
 
 const handleText = (data) => {
-    const isExist = text.find(t => t.id === data.id);
-    if (isExist) {
-        toast.error(`Text with ${data.name} Exist`);
-        return;
-    }
-    setText([...text, data]);
-    toast.success(`Text with ${data.name}`);
+    logActivity(data, 'text');
 }
 
 const handleVideo = (data) => {
-    const isExist = video.find(v => v.id === data.id);
-    if (isExist) {
-        toast.error(`Video with ${data.name} Exist`);
-        return;
-    }
-    setVideo([...video, data]);
-    toast.success(`Video with ${data.name}`);
+    logActivity(data, 'video');
 }
 
     const dataInfo = {
-        friends, setFriends, loading, call, text, video, handleCall, handleText, handleVideo
+        friends, setFriends, loading, handleCall, handleText, handleVideo
     }
 
     return (
