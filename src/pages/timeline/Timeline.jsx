@@ -3,9 +3,10 @@ import { Helmet } from "react-helmet-async";
 import DataContext from "../../features/context/DataContext";
 import TimelineCard from "./TimelineCard";
 import TimelinFilter from "./TimelinFilter";
+import TimelineEmpty from "./TimelineEmpty";
 
 const Timeline = () => {
-    const { activities } = useContext(DataContext);
+    const { activities, filterActivities } = useContext(DataContext);
 
     return (
         <>
@@ -18,13 +19,13 @@ const Timeline = () => {
                 <div>
                     <h1 className="font-bold text-2xl">Timeline</h1>
                 </div>
-                <div className="flex justify-center">
+                <div>
                     <TimelinFilter/>
                 </div>
             </section>
             <section>
                 <div className="flex flex-col gap-2">
-                {activities.map(act => <TimelineCard act={act} key={act.id}/>)}
+                {activities.length === 0 ? <TimelineEmpty/> : filterActivities.map(act => <TimelineCard act={act} key={act.id}/>)}
                 </div>
             </section>
         </div>
